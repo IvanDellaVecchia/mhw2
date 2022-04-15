@@ -1,0 +1,91 @@
+/* TODO: inserite il CSS necessario per completare il MHW! */
+:root{
+    --answer-padding: 10px;
+    --answer-border: 1px;
+}
+
+.choice-grid{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.choice-grid div{
+    display: flex;
+    flex-direction: column;
+
+    background-color: #f4f4f4;
+    border: var(--answer-border) solid #dcdcdc;
+    padding: var(--answer-padding);
+    width: calc(32.5% - var(--answer-padding)*2 - var(--answer-border)*2);
+    margin-bottom: 20px;
+}
+
+#first{
+    background-image: url('images/primi-piatti.jpg');
+    background-size: cover;
+}
+
+#second{
+    background-image: url('images/secondo-piatto.jpg');
+    background-size: cover;
+}
+
+#third{
+    background-image: url('images/dolci.jpg');
+    background-size: cover;
+}
+
+@media (max-width: 700px){
+    article{
+        width: 95%;
+    }
+    header div{
+        display: none;
+    }
+}
+
+@media (max-width: 500px){
+    .choice-grid div{
+        width: calc(49% - var(--answer-padding)*2 - var(--answer-border)*2);
+    }
+}
+
+
+
+
+.choice-grid div.selected{
+    background-color: #cfe3ff;
+    opacity: 1;
+}
+
+.choice-grid div.unselected{
+    background-color: #f4f4f4;
+    opacity: 0.6;
+}
+
+.hidden{
+    display: none;
+}
+
+
+
+
+#result{
+    padding: 20px;
+    margin: 20px 0px;
+}
+
+#result h1{
+    margin: 0px;
+}
+
+#result button{
+    height: 50px;
+    width: 100%;
+    background-color: #cecece;
+}
+
+#result button:hover{
+    background-color: #e0e0e0;
+}
